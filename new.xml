@@ -1,0 +1,110 @@
+<libraries>
+    <!--  ==1 instance of libraries element  -->
+    <library>
+        <!--  >=0 instances of library element  -->
+        <id>1</id>
+        <info>
+            <!--  ==1 instance of info per library  -->
+            <lat>-45.867493</lat>
+            <lng>170.520355</lng>
+            <address>145 Union St East</address>
+            <capacity>5</capacity>
+        </info>
+        <books>
+            <!--  ==1 instance of books per library  -->
+            <book>
+                <title>Robinson Crusoe</title>
+                <author>Daniel Defoe</author>
+                <year>1719</year>
+            </book>
+            <book>
+                <title>War and Peace</title>
+                <author>Leo Tolstoy</author>
+                <year>1869</year>
+            </book>
+            <book>
+                <title>Great Expectations</title>
+                <author>Charles Dickens</author>
+                <year>1861</year>
+            </book>
+            <book>
+                <title>Emma</title>
+                <author>Jane Austen</author>
+                <year>1815</year>
+            </book>
+        </books>
+    </library>
+    <library>
+        <!--  >=0 instances of library element  -->
+        <id>2</id>
+        <info>
+            <!--  ==1 instance of info per library  -->
+            <lat>-45.861245</lat>
+            <lng>170.515870</lng>
+            <address>597 Castle St</address>
+            <capacity>5</capacity>
+        </info>
+        <books>
+            <!--  ==1 instance of books per library  -->
+            <book>
+                <title>The Wind in the Willows</title>
+                <author>Kenneth Grahame</author>
+                <year>1908</year>
+            </book>
+            <book>
+                <title>Wuthering Heights</title>
+                <author>Emily Brontë</author>
+                <year>1847</year>
+            </book>
+            <book>
+                <title>Alice's Adventures In Wonderland</title>
+                <author>Lewis Carroll</author>
+                <year>1865</year>
+            </book>
+        </books>
+    </library>
+    <library>
+        <!--  >=0 instances of library element  -->
+        <id>3</id>
+        <info>
+            <!--  ==1 instance of info per library  -->
+            <lat>-45.849105</lat>
+            <lng>170.534440</lng>
+            <address>33 Baldwin St</address>
+            <capacity>7</capacity>
+        </info>
+        <books>
+            <!--  ==1 instance of books per library  -->
+            <book>
+                <title>To Kill A Mockingbird</title>
+                <author>Harper Lee</author>
+                <year>1960</year>
+            </book>
+            <book>
+                <title>The BFG</title>
+                <author>Roald Dahl</author>
+                <year>1982</year>
+            </book>
+            <book>
+                <title>Northern Lights</title>
+                <author>Philip Pullman</author>
+                <year>1995</year>
+            </book>
+            <book>
+                <title>Brave New World</title>
+                <author>Aldous Huxley</author>
+                <year>1932</year>
+            </book>
+            <book>
+                <title>Nineteen Eighty-Four</title>
+                <author>George Orwell</author>
+                <year>1949</year>
+            </book>
+            <book>
+                <title>Lord of the Flies</title>
+                <author>William Golding</author>
+                <year>1954</year>
+            </book>
+        </books>
+    </library>
+</libraries>
