@@ -2,10 +2,8 @@
  * Created by xichen on 8/12/17.
  */
 
-//todo: see line 60
-
+//todo: the pop up information is still not right, fix that.
 var Map = (function() {
-
     var pub = {};
     var pointsofInterest = {
         "type": "FeatureCollection",
@@ -42,7 +40,7 @@ var Map = (function() {
 
 
 
-
+    var statement = "<tr> <th>Address</th> <th>Number of books present</th> <th>Capacity of library</th></tr>";
     var pointsofLibrary = {};
     pointsofLibrary.type = "FeatureCollection";
     pointsofLibrary.features = [];
@@ -83,7 +81,7 @@ var Map = (function() {
         // var popupContent = "<b>Point of Interest</b> <br/>" +
         //     feature.properties.description;
         var i = 0;
-        var popupContent = "<pre>" + JSON.stringify(pointsofLibrary, null, 2) + "</pre>";
+        var popupContent = "<b>Name: </b>" + feature.properties.description + feature.properties.capacity;
         layer.bindPopup(popupContent);
     }
 
@@ -110,8 +108,17 @@ var Map = (function() {
                 object.id = parseInt(id);
                 pointsofLibrary.features.push(object);
 
+                object.properties.booknumber = $(this).find("book").length;
+                object.properties.capacity = $(this).find("capacity")[0].textContent;
+                statement += "<tr><td>" + address + "</td><td>" + object.properties.booknumber +
+                    "</td><td>" + object.properties.capacity + "</td></tr>";
+
+
+
 
             })
+            console.log(statement);
+            $("#libraryinfo").html(statement);
 
 
 
