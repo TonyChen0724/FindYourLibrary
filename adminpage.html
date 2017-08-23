@@ -1,0 +1,85 @@
+<!--todo: validate adminpage.html and fix all errors-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin page</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="admin.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
+    <!--<script src="adminvalidator.js"></script>-->
+</head>
+
+<body>
+    <h1>Admin Page</h1>
+
+    <nav>
+
+        <ul>
+            <li> <a href="index.html">Map and Table</a></li>
+            <li> <a href="table.html">Table information</a></li>
+            <li>Admin</li>
+        </ul>
+
+
+
+    </nav>
+    <h2>This is administrative page, you can modify information about the Lilliput Library</h2>
+
+    <div id="change">
+        <!-- Content is JavaScript driven -->
+        <h3>Modify Contents</h3>
+        <div id="cart"></div>
+        <div id="errors"></div>
+        <form id="checkoutForm" novalidate>
+
+
+            <fieldset>
+                <legend>Payment Details:</legend>
+                <p>
+                    <label for="library">Library</label>
+                    <select name="library" id="library">
+                        <!--<option value="amex">American Express</option>-->
+                        <!--<option value="mcard">Master Card</option>-->
+                        <!--<option value="visa">Visa</option>-->
+                        <!-- I shall use a javascript to add statements to it -->
+
+                    </select>
+                </p>
+                <p>
+                    <label for="changeAddress">Change Address:</label>
+                    <input type="text" name="changeAddress" id="changeAddress" maxlength="16" required>
+                </p>
+
+                <p>
+                    <label for="changeCapacity">Change Capacity:</label>
+                    <input type="number" name="changeCapacity" id="changeCapacity" maxlength="16" required>
+                </p>
+
+                <p>
+                    <label for="changebooknum">Change number of books:</label>
+                    <input type="number" name="changebooknum" id="changebooknum" maxlength="16" required>
+                </p>
+
+
+
+                <p>
+                    <label for="changelatitude">Change latitude:</label>
+                    <input type="number" step="0.0001" name="changelatitude" id="changelatitude" maxlength="16" required>
+                </p>
+
+                <p>
+                    <label for="changelongitude">Change longitude:</label>
+                    <input type="number" step="0.0001" name="changelongitude" id="changelongitude" maxlength="16" required>
+                </p>
+
+
+
+            </fieldset>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,9 +1,14 @@
 /**
+ * Created by xichen on 8/21/17.
+ */
+/**
  * Created by xichen on 8/12/17.
  */
 var Map = (function() {
     var adressSpecifier = []; // I use this addressSpecifier for the convenience of adding an onclick to each address
     var pub = {};
+
+
 
     var statement = "<tr> <th>Address</th> <th>Number of books present</th> <th>Capacity of library</th></tr>";
     var bookstatement = "";
@@ -13,27 +18,16 @@ var Map = (function() {
     /* this function is for converting xml file to GeoJSON file. */
     function appendToGeo() {
         var fileName = "./new.xml";
-        $.ajax({
+        var success = $.ajax({
             type: "GET",
             url: fileName,
             cache: false,
             success: function (data) {
                 converting(data);
                 console.log(JSON.stringify(pointsofLibrary));
-                //popup.setContent("<pre" + JSON.stringify(geojson, null, 2) + "</pre>");
-                //L.geoJSON(pointsofLibrary).addTo(mymap); // geoJSON is not working, find out why?
 
-                var mymap = L.map('mapid').setView([-45.8744, 170.5029], 14);
-                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-                    maxZoom: 18,
-                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-                    id: 'mapbox.streets'
-                }).addTo(mymap);
-                var pointsofLibraryLayer = L.geoJSON(pointsofLibrary, {
-                    onEachFeature: onEachFeatureImpl
-                }).addTo(mymap);
+
+
             },
             error:  function(xhr, status, error) {
                 var err = eval("(" + xhr.responseText + ")");
@@ -41,16 +35,10 @@ var Map = (function() {
             }
 
         });
-
-
-
-
-
     }
 
     function onEachFeatureImpl(feature, layer) {
-        // var popupContent = "<b>Point of Interest</b> <br/>" +
-        //     feature.properties.description;
+
         var i = 0;
         var popupContent = "<b>Name: </b>" + feature.properties.description + feature.properties.capacity;
         layer.bindPopup(popupContent);

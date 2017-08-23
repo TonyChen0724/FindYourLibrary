@@ -1,0 +1,26 @@
+nav, #main{
+    float:left;
+}
+
+nav{
+    width:155px; /* 135px + 20px 'cos of the box-sizing including the padding in the width */
+    font-size: 12pt;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li{ /* Makes lines other than first line indented by 2em */
+    margin-left: 2em;
+    text-indent: -2em;
+}
+
+#important {
+    color: red;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
